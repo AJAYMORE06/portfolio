@@ -1,0 +1,38 @@
+
+  .site-footer .footer-social-links li a {
+    color: #dddddd;
+    text-decoration: none;
+    line-height: 21px;
+    font-size: 13px;
+  }
+  .footer-social {
+    float: left;
+}
+.site-footer .footer-social-links {
+    list-style: none;
+    padding: 0;
+}
+.site-footer {
+    background-color: #252525;
+    border-color: #333333;
+}
+.site-footer {
+    display: block;
+    padding: 15px 45px;
+    border-top: 1px solid #7066ff;
+}
+.footer-social-links{
+    display: flex;
+    margin-left: 5vw;
+}
+.linksFooter:hover{
+color: #7066ff !important;
+opacity: 100;
+}
+footer {
+    /* position:absolute; */
+    bottom:0;
+    width:100%;
+    margin-top: 91px;
+    height:60px;   /* Height of the footer */
+}

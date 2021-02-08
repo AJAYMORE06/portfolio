@@ -1,0 +1,25 @@
+.intro{
+    margin-left: 12vw;
+    margin-top: 15vh;
+    display: flex;
+}
+.touch{
+    color: #7066ff;
+}
+.touch:hover{
+    color:#7066ff ;
+}
+.myImg{
+    margin-right: 6vw;
+    width: 32%;
+    height: 36%;
+    border-radius: 50%;
+    border: 14px solid #444;
+    
+}
+.downloadLink{
+    color: #fff;
+}
+.downloadLink:hover{
+    color: #fff;
+}

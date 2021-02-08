@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding-top: 1%;
+    position: relative;
+    background-color: #302f2f !important;    /* Full height */
+  }
+
+  .fontNav{
+      font-family: inherit;
+      font-size: 14px;
+  }
+  .fontBrand{
+    font-family: inherit;
+    font-size: 18px;
+    color: #7066ff !important;
+  }
+.btn-primary{
+    color: #fff;
+    background-color: #333;
+    box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+    border: 2px solid #7066ff;
+    font-family: inherit ;
+}
+.fontFam{
+    font-family: inherit;
+}

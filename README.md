@@ -1,8 +1,8 @@
 #Programmer portfolio
 
-This project is having my portfolio which contains two sections, About me and Experience.
+This project is having my programmer portfolio which contains two sections, About me and Experience.
                   
-*Clone the project -- git clone https://github.com/AJAYMORE06/portfolio.git
+*Clone the project:-  git clone https://github.com/AJAYMORE06/portfolio.git
 
 *Install node modules
 

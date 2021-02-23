@@ -19,13 +19,16 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fontNav" target="_self" routerLinkActive="active" routerLink="/about">About Me</a>
+                    <a class="nav-link fontNav" target="_self" routerLinkActive="active" routerLink="/about">About
+                        Me</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fontNav" target="_self" routerLinkActive="active" routerLink="/experience">Experience</a>
+                    <a class="nav-link fontNav" target="_self" routerLinkActive="active"
+                        routerLink="/experience">Experience</a>
                 </li>
             </ul>
-
+            <button *ngIf="makeBtn" class="btn btn-primary"  target="_self" routerLink="/portfolioForm" type="button">Make Portfolio</button>
+            <button *ngIf="resetBtn" class="btn btn-primary"  target="_self" routerLink="/portfolioForm" type="button">Edit Portfolio</button>
         </div>
 
     </div>

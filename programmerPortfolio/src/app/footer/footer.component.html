@@ -1,10 +1,35 @@
 <footer class="site-footer clearfix">
-    <div class="row footer-social">
-        <ul class="footer-social-links">
-            <li style="margin-right: 1vw;"><a class="linksFooter" href="https://www.linkedin.com/in/ajay-more-457a82131/" target="_blank">LinkedIn</a></li>
-            <li style="margin-right: 1vw;"><a class="linksFooter" href="https://www.instagram.com/__ajaymore__/" target="_blank">Instagram</a></li>
-            <li style="margin-right: 1vw;"><a class="linksFooter" href="https://www.facebook.com/ajay.more.39/" target="_blank">Facebook</a></li>
-            <li style="margin-right: 1vw;"><a class="linksFooter" href="https://github.com/AJAYMORE06" target="_blank">GitHub</a></li>
-        </ul>
+    <div class="row">
+        <div class="col-md-6 conversationCorner">
+            <p class="contactDetails">Start the conversation</p>
+            <ul class="footer-social-link">
+                <li style="margin-right: 1vw;"><a class="linksFooter" title="Email"
+                        href="https://mail.google.com/mail/u/" target="_blank"><i class="fa fa-envelope-o iconsAlign"
+                            aria-hidden="true"></i>{{emailId}}</a>
+                </li>
+                <li style="margin-right: 1vw;">
+                    <a title="Whatsapp" class="linksFooter" style="margin-right: 20px !important;"
+                        href="https://api.whatsapp.com/send?phone=8668553488&text=Hi,%20Hope%20you%20are%20doing%20well.%20How%20may%20I%20help%20you.?"
+                        target="_blank"><i class="fa fa-whatsapp iconsAlign" aria-hidden="true"></i>{{whatsAppNum}}</a>
+                    <a class="linksFooter" title="Call me"><i *ngIf="showCall" class="fa fa-phone iconsAlign"
+                            aria-hidden="true"></i>{{call}}</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="col-md-4 offset-md-2 footer-social">
+            <p class="contactDetails">Follow me on</p>
+            <ul class="footer-social-links">
+                <li style="margin-right: 1vw;"><a class="linksFooter" title="LinkedIn" href="{{linkedIn}}"
+                        target="_blank"><i class="fa fa-linkedin-square iconsAlign" aria-hidden="true"></i></a></li>
+                <li style="margin-right: 1vw;"><a class="linksFooter" title="Instagram" href="{{instagram}}"
+                        target="_blank"><i class="fa fa-instagram iconsAlign" aria-hidden="true"></i></a></li>
+                <li style="margin-right: 1vw;"><a class="linksFooter" title="Facebook" href="{{facebook}}"
+                        target="_blank"><i class="fa fa-facebook iconsAlign" aria-hidden="true"></i></a></li>
+                <li style="margin-right: 1vw;"><a class="linksFooter" title="Github" href="{{github}}"
+                        target="_blank"><i class="fa fa-github iconsAlign" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
     </div>
 </footer>

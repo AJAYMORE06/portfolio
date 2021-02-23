@@ -1,79 +1,74 @@
 <div class="container" style="margin-top: 15vh; margin-left: 12vw; margin-bottom: 15vh;">
-    <div class="row">
-        <div class="col-md-2  boxAbout">
-            <p class="boxStyle"><span class="text-success fontFam">// My Self Introduction</span></p>
-            <p style="color: #fff;">&#123;</p>
-            <p class="fontFam boxStyle">First Name: <span class="fontFam" style="color: #7066ff;">&nbsp;
-                    Ajay</span>&nbsp;,</p>
-            <p class="fontFam boxStyle">Last Name: <span class="fontFam" style="color: #7066ff;">&nbsp;
-                    More</span>&nbsp;,</p>
-            <p class="fontFam boxStyle">Age: <span class="fontFam" style="color: #7066ff;">&nbsp;
-                    25</span>&nbsp;,</p>
-            <p style="color: #fff;">&#10101;</p>
+        <div class="row">
+                <div class="col-md-2  boxAbout">
+                        <p class="boxStyle"><span class="text-success fontFam">// My Self Introduction</span></p>
+                        <p style="color: #fff;">&#123;</p>
+                        <p class="fontFam boxStyle">"First Name": <span class="fontFam" style="color: #7066ff;">&nbsp;
+                                        {{firstName}}</span>&nbsp;,</p>
+                        <p class="fontFam boxStyle">"Last Name": <span class="fontFam" style="color: #7066ff;">&nbsp;
+                                        {{lastName}}</span>&nbsp;,</p>
+                        <p class="fontFam boxStyle">"Age": <span class="fontFam" style="color: #7066ff;">&nbsp;
+                                        {{age}}</span>&nbsp;,</p>
+                        <p style="color: #fff;">&#10101;</p>
+                </div>
+                <div class="col-md-2 offset-md-1 boxAbout">
+                        <p class="boxStyle"><span class="text-success fontFam">// Education</span></p>
+                        <p style="color: #fff;">&#123;</p>
+                        <p class="fontFam boxStyle">"Graduation": <span class="fontFam" style="color: #7066ff;">&nbsp;
+                                        {{qualification}}</span>&nbsp;,</p>
+                        <p class="fontFam boxStyle">"Stream": <span class="fontFam" style="color: #7066ff;">&nbsp;
+                                        {{stream}}</span>&nbsp;,</p>
+                        <p class="fontFam boxStyle">"From": <span class="fontFam" style="color: #7066ff;">&nbsp;
+                                        {{university}}</span>&nbsp;,</p>
+                        <p style="color: #fff;">&#10101;</p>
+                </div>
+                <div class="col-md-2 offset-md-1 boxAbout">
+                        <p class="boxStyle"><span class="text-success fontFam">// Hobbies</span></p>
+                        <p style="color: #fff;">&#123;</p>
+                        <p class="fontFam boxStyle">
+                                "Indoor": <span class="fontFam" style="color: #7066ff;">&nbsp; {{indoorHobbie}}</span>&nbsp;,
+                        </p>
+                        <p class="fontFam boxStyle">"Outdoor": <span class="fontFam" style="color: #7066ff;">&nbsp;
+                                        {{outdoorHobbie}}</span>&nbsp;,</p>
+                        <p style="color: #fff;">&#10101;</p>
+                </div>
+                <div *ngIf="totalExperienceBool" class="col-md-2 offset-md-1 boxAbout">
+                        <p class="boxStyle"><span class="text-success fontFam">// Experience</span></p>
+                        <p style="color: #fff;">&#123;</p>
+                        <p *ngIf="!moreExperience" class="fontFam boxStyle">"Total": <span class="fontFam"
+                                        style="color: #7066ff;">&nbsp;{{totalExperience}} Years</span>&nbsp;,</p>
+                        <p *ngIf="moreExperience" class="fontFam boxStyle">"Total": <span class="fontFam"
+                                        style="color: #7066ff;">&nbsp;{{totalExperience}} Year</span>&nbsp;,</p>
+                        <p class="fontFam boxStyle">"Where": <span class="fontFam" style="color: #7066ff;">&nbsp;
+                                        {{currentEmployer}}</span>&nbsp;,</p>
+                        <p class="fontFam boxStyle">"Designation": <span class="fontFam" style="color: #7066ff;">&nbsp;
+                                        {{designation}}</span>&nbsp;</p>
+                        <p style="color: #fff;">&#10101;</p>
+                        <a routerLink="/experience" class="touch fontFam">View Details</a>
+                </div>
         </div>
-        <div class="col-md-2 offset-md-1 boxAbout">
-            <p class="boxStyle"><span class="text-success fontFam">// Education</span></p>
-            <p style="color: #fff;">&#123;</p>
-            <p class="fontFam boxStyle">Graduation: <span class="fontFam" style="color: #7066ff;">&nbsp;
-                    B.E</span>&nbsp;,</p>
-            <p class="fontFam boxStyle">Stream: <span class="fontFam" style="color: #7066ff;">&nbsp;
-                    Mechanical</span>&nbsp;,</p>
-            <p class="fontFam boxStyle">From: <span class="fontFam" style="color: #7066ff;">&nbsp; MIT
-                    Aurangabad</span>&nbsp;,</p>
-            <p style="color: #fff;">&#10101;</p>
+        <br>
+        <div class="container">
+                <h4 class="fontFam" style="color: #7066ff;">Skills</h4>
+                <p class="fontFam boxStyleSkillTitle"> &nbsp; &nbsp;var technical_Skills =&nbsp;<span
+                                class="fontFam boxStyleSkill" style="color: #7066ff;">
+                                <span style="color: #fff;">&#10635; </span>&nbsp;{{technicalSkills}}&nbsp;<span
+                                        style="color: #fff;">&#10636;</span>&nbsp;<span style="color: #fff;">;</span>
+                        </span></p>
+                <p class="fontFam boxStyleSkillTitle"> &nbsp; &nbsp;var soft_Skills =&nbsp;<span
+                                class="fontFam boxStyleSkill" style="color: #7066ff;">
+                                <span style="color: #fff;">&#10635; </span>&nbsp;{{softSkills}}&nbsp;<span
+                                        style="color: #fff;">&#10636;</span>&nbsp;<span style="color: #fff;">;</span>
+                        </span></p>
         </div>
-        <div class="col-md-2 offset-md-1 boxAbout">
-            <p class="boxStyle"><span class="text-success fontFam">// Hobbies</span></p>
-            <p style="color: #fff;">&#123;</p>
-            <p class="fontFam boxStyle">Indoor: <span class="fontFam" style="color: #7066ff;">&nbsp; Video
-                    Games</span>&nbsp;,</p>
-            <p class="fontFam boxStyle">Outdoor: <span class="fontFam" style="color: #7066ff;">&nbsp;
-                    Football</span>&nbsp;,</p>
-            <p class="fontFam boxStyle">Outdoor: <span class="fontFam" style="color: #7066ff;">&nbsp;
-                    Trekker</span>&nbsp;,</p>
-            <p style="color: #fff;">&#10101;</p>
+        <br>
+        <div class="container">
+                <h4 class="fontFam" style="color: #7066ff;">Goals</h4>
+                <p class="fontFam boxStyleSkill"><span>
+                                <h5 class="fontFam boxStyleSkill"> &nbsp; &nbsp;Short Term Goal:</h5>
+                        </span><span style="padding-left: 30px;">{{shortTermGoal}}</span></p>
+                <p class="fontFam boxStyleSkill"><span>
+                                <h5 class="fontFam boxStyleSkill"> &nbsp; &nbsp;Long Term Goal:</h5>
+                        </span><span style="padding-left: 30px;">{{longTermGoal}}</span></p>
         </div>
-        <div class="col-md-2 offset-md-1 boxAbout">
-            <p class="boxStyle"><span class="text-success fontFam">// Experience</span></p>
-            <p style="color: #fff;">&#123;</p>
-            <p class="fontFam boxStyle">Total: <span class="fontFam" style="color: #7066ff;">&nbsp; 2
-                    Years</span>&nbsp;,</p>
-            <p class="fontFam boxStyle">Where: <span class="fontFam" style="color: #7066ff;">&nbsp;
-                    Infosys Ltd</span>&nbsp;,</p>
-            <p class="fontFam boxStyle">Designation: <span class="fontFam" style="color: #7066ff;">&nbsp;
-                    Systems Engineer</span>&nbsp;,</p>
-            <p style="color: #fff;">&#10101;</p>
-            <a routerLink="/experience" class="touch fontFam">View Details</a>
-        </div>
-    </div>
-    <br>
-    <div class="container">
-        <h4 class="fontFam" style="color: #7066ff;">Skills</h4>
-        <p class="fontFam boxStyleSkillTitle"> &nbsp; &nbsp;var technical_Skills =&nbsp;<span
-                class="fontFam boxStyleSkill" style="color: #7066ff;">
-                <span style="color: #fff;">&#10635; </span>&nbsp;Angular5, &nbsp;Angular 6,&nbsp;Javascript,&nbsp;HTML
-                5,&nbsp;CSS 3, &nbsp;Bootstrap
-                4, &nbsp;Typescript, &nbsp;C++ &nbsp;<span style="color: #fff;">&#10636;</span>&nbsp;<span
-                    style="color: #fff;">;</span>
-            </span></p>
-        <p class="fontFam boxStyleSkillTitle"> &nbsp; &nbsp;var soft_Skills =&nbsp;<span class="fontFam boxStyleSkill"
-                style="color: #7066ff;">
-                <span style="color: #fff;">&#10635; </span>&nbsp;Communicator,
-                &nbsp;Innovative,&nbsp;Intutive,&nbsp;Collaborative,&nbsp;Thinker &nbsp;<span
-                    style="color: #fff;">&#10636;</span>&nbsp;<span style="color: #fff;">;</span>
-            </span></p>
-    </div>
-    <br>
-    <div class="container">
-        <h4 class="fontFam" style="color: #7066ff;">Goals</h4>
-        <p class="fontFam boxStyleSkill"><span>
-                <h5 class="fontFam boxStyleSkill"> &nbsp; &nbsp;Short Term Goal:</h5>
-            </span><span style="padding-left: 30px;"> My short term goal is to get placed in good and reputed company. I want to explore, increase
-            my skills and want to grow my career.</span></p>
-        <p class="fontFam boxStyleSkill"><span>
-                <h5 class="fontFam boxStyleSkill"> &nbsp; &nbsp;Long Term Goal:</h5>
-            </span><span style="padding-left: 30px;"> My long term goal is to take on bigger, more challenging targets so I can assess my abilities.
-                 I plan on shaping myself during this initial
-                 time so that I'm prepared to deliver on bigger targets later.</span></p>
-    </div>
 </div>

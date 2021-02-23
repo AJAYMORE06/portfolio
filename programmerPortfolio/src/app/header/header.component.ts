@@ -6,10 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  formDetails: any;
+  resetBtn: boolean = false;
+  makeBtn: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
+    this.formDetails = JSON.parse(localStorage.getItem("formDetails"));
+    if (this.formDetails != null && this.formDetails != undefined && this.formDetails != "") {
+      if (this.formDetails.firstName != null && this.formDetails.firstName != undefined && this.formDetails.firstName != "") {
+        console.log("inside header")
+        this.resetBtn = true;
+        this.makeBtn = false;
+      } else {
+        this.resetBtn = false;
+        this.makeBtn = true;
+      }
+    }
     var btnContainer = document.getElementById("linksActive");
 
     // Get all buttons with class="btn" inside the container

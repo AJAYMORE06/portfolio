@@ -1,0 +1,403 @@
+<div class="container" style="margin-top: 15vh;margin-bottom: 15vh;">
+    <div class="col-md-8 offset-md-2 borderBoxMain">
+        <form [formGroup]="registerForm">
+            <p class="titleHead">Introduction</p>
+            <div class="borderBox">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="name" formControlName="firstName">
+                    <p *ngIf="registerForm.controls.firstName.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="lastName" formControlName="lastName">
+                    <p *ngIf="registerForm.controls.lastName.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="number" min="1" max="110" class="form-control" [(ngModel)]="age" formControlName="age">
+                    <p *ngIf="registerForm.controls.age.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Short Term Goal</label>
+                    <input type="text" class="form-control" [(ngModel)]="shortGoal" formControlName="shortGoal">
+                    <p *ngIf="registerForm.controls.shortGoal.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Long Term Goal</label>
+                    <input type="text" class="form-control" [(ngModel)]="longGoal" formControlName="longGoal">
+                    <p *ngIf="registerForm.controls.longGoal.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Introduction</label>
+                    <ckeditor [(ngModel)]="model.editorData" formControlName="editor" type="divarea">
+                    </ckeditor>
+                    <p *ngIf="registerForm.controls.editor.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+            </div>
+            <p class="titleHead">Hobbies</p>
+            <div class="borderBox">
+                <div class="form-group">
+                    <label>Indoor</label>
+                    <input type="text" [(ngModel)]="indoor" class="form-control" formControlName="indoor"
+                        placeholder="For eg: Reading, Video games, Chess etc">
+                    <p *ngIf="registerForm.controls.indoor.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                    <small class="form-text smallHelpText">
+                        Please specify hobbies with comma (,) separation
+                    </small>
+
+                </div>
+                <div class="form-group">
+                    <label>Outdoor</label>
+                    <input type="text" [(ngModel)]="outdoor" class="form-control" formControlName="outdoor"
+                        placeholder="For eg: Football, Cricket, Trekking etc">
+                    <p *ngIf="registerForm.controls.outdoor.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                    <small class="form-text smallHelpText">
+                        Please specify hobbies with comma (,) separation
+                    </small>
+                </div>
+            </div>
+            <p class="titleHead">Skills</p>
+            <div class="borderBox">
+                <div class="form-group">
+                    <label>Technical Skills</label>
+                    <input type="text" class="form-control" [(ngModel)]="technical" formControlName="technicalSkills"
+                        placeholder="For eg: Angular5, Javascript, CSS, HTML etc">
+                    <p *ngIf="registerForm.controls.technicalSkills.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                    <small class="form-text smallHelpText">
+                        Please specify Technical skills with comma (,) separation
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label>Soft Skills</label>
+                    <input type="text" class="form-control" [(ngModel)]="soft" formControlName="softSkills"
+                        placeholder="For eg: Intuitive, Collaborative, Innovative etc">
+                    <p *ngIf="registerForm.controls.softSkills.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                    <small class="form-text smallHelpText">
+                        Please specify Soft skills with comma (,) separation
+                    </small>
+                </div>
+            </div>
+            <p class="titleHead">Education</p>
+            <div class="borderBox">
+                <div class="form-group">
+                    <label>Highest Qualification</label>
+                    <input type="text" class="form-control" [(ngModel)]="highestQualification"
+                        formControlName="qualification">
+                    <p *ngIf="registerForm.controls.qualification.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Stream</label>
+                    <input type="text" class="form-control" [(ngModel)]="stream" formControlName="stream">
+                    <p *ngIf="registerForm.controls.stream.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Institute/University</label>
+                    <input type="text" class="form-control" [(ngModel)]="university" formControlName="university">
+                    <p *ngIf="registerForm.controls.university.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+            </div>
+            <p class="titleHead">Professional Experience</p>
+            <div class="borderBox">
+                <div class="form-group">
+                    <label>Total Experience</label>
+                    <input type="number" min="0" max="80" [(ngModel)]="experienceTotal" class="form-control"
+                        formControlName="totalExperience">
+                    <p *ngIf="registerForm.controls.totalExperience.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div *ngIf="experienceTotal>0" class="form-group">
+                    <label>Work Profile</label>
+                    <input type="text" [(ngModel)]="profile" class="form-control" formControlName="workProfile"
+                        placeholder="For eg: Frontend/Backend Developer, Test Engineer etc">
+                    <p *ngIf="registerForm.controls.workProfile.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div *ngIf="experienceTotal>0" class="form-group">
+                    <label>Current Employer</label>
+                    <input type="text" [(ngModel)]="currentEmployer" class="form-control"
+                        formControlName="currentEmployer">
+                    <p *ngIf="registerForm.controls.currentEmployer.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div *ngIf="experienceTotal>0" class="form-group">
+                    <label>Designation</label>
+                    <input type="text" class="form-control" [(ngModel)]="designation" formControlName="designation">
+                    <p *ngIf="registerForm.controls.designation.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+            </div>
+            <p *ngIf="experienceTotal>0" class="titleHead">Projects<i class="fa fa-plus-circle alignPlusIcon"
+                    title="Add Project" (click)="addProject()" aria-hidden="true"></i></p>
+            <div *ngIf="experienceTotal>0" class="borderBox">
+                <div class="form-group">
+                    <label>Organisation</label>
+                    <input type="text" [(ngModel)]="organisation" class="form-control" formControlName="organisation">
+                    <p *ngIf="registerForm.controls.organisation.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label for="fromDate">Project Duration (From)</label>
+                    <input type="date" [(ngModel)]="fromDate" id="fromDate" class="form-control"
+                        formControlName="durationFrom" placeholder="From Date">
+                    <p *ngIf="registerForm.controls.durationFrom.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <label for="toDate">Project Duration (To)</label>
+                    <input type="date" [(ngModel)]="toDate" id="toDate" class="form-control"
+                        formControlName="durationTo" placeholder="To Date">
+                    <p *ngIf="registerForm.controls.durationTo.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Project Description</label>
+                    <textarea type="text" class="form-control" [(ngModel)]="description"
+                        formControlName="projectDescription"></textarea>
+                    <p *ngIf="registerForm.controls.projectDescription.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Roles and Responsibilities</label>
+                    <textarea type="text" class="form-control" [(ngModel)]="roles"
+                        formControlName="responsibility"></textarea>
+                    <p *ngIf="registerForm.controls.responsibility.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+            </div>
+            <i *ngIf="projectOne" class="fa fa-minus-circle alignMinusIcon" title="Add Project"
+                (click)="removeProjectOne()" aria-hidden="true"></i>
+            <div *ngIf="projectOne" style="margin-top: 15px;" class="borderBox">
+                <div class="form-group">
+                    <label>Organisation</label>
+                    <input type="text" [(ngModel)]="organisationOne" class="form-control"
+                        formControlName="organisationOne">
+                    <p *ngIf="registerForm.controls.organisationOne.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label for="fromDate">Project Duration (From)</label>
+                    <input type="date" [(ngModel)]="fromDateOne" id="fromDate" class="form-control"
+                        formControlName="durationFromOne" placeholder="From Date">
+                    <p *ngIf="registerForm.controls.durationFromOne.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <label for="toDate">Project Duration (To)</label>
+                    <input type="date" [(ngModel)]="toDateOne" id="toDate" class="form-control"
+                        formControlName="durationToOne" placeholder="To Date">
+                    <p *ngIf="registerForm.controls.durationToOne.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Project Description</label>
+                    <textarea type="text" [(ngModel)]="descriptionOne" class="form-control"
+                        formControlName="projectDescriptionOne"></textarea>
+                    <p *ngIf="registerForm.controls.projectDescriptionOne.errors" class="alert alert-danger">This field
+                        is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Roles and Responsibilities</label>
+                    <textarea type="text" [(ngModel)]="rolesOne" class="form-control"
+                        formControlName="responsibilityOne"></textarea>
+                    <p *ngIf="registerForm.controls.responsibilityOne.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+            </div>
+            <i *ngIf="projectTwo" class="fa fa-minus-circle alignMinusIcon" title="Add Project"
+                (click)="removeProjectTwo()" aria-hidden="true"></i>
+            <div *ngIf="projectTwo" style="margin-top: 15px;" class="borderBox">
+                <div class="form-group">
+                    <label>Organisation</label>
+                    <input type="text" [(ngModel)]="organisationTwo" class="form-control"
+                        formControlName="organisationTwo">
+                    <p *ngIf="registerForm.controls.organisationTwo.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label for="fromDate">Project Duration (From)</label>
+                    <input type="date" [(ngModel)]="fromDateTwo" id="fromDate" class="form-control"
+                        formControlName="durationFromTwo" placeholder="From Date">
+                    <p *ngIf="registerForm.controls.durationFromTwo.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <label for="toDate">Project Duration (To)</label>
+                    <input type="date" [(ngModel)]="toDateTwo" id="toDate" class="form-control"
+                        formControlName="durationToTwo" placeholder="To Date">
+                    <p *ngIf="registerForm.controls.durationToTwo.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Project Description</label>
+                    <textarea type="text" class="form-control" [(ngModel)]="descriptionTwo"
+                        formControlName="projectDescriptionTwo"></textarea>
+                    <p *ngIf="registerForm.controls.projectDescriptionTwo.errors" class="alert alert-danger">This field
+                        is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Roles and Responsibilities</label>
+                    <textarea type="text" class="form-control" [(ngModel)]="rolesTwo"
+                        formControlName="responsibilityTwo"></textarea>
+                    <p *ngIf="registerForm.controls.responsibilityTwo.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+            </div>
+            <i *ngIf="projectThree" class="fa fa-minus-circle alignMinusIcon" title="Add Project"
+                (click)="removeProjectThree()" aria-hidden="true"></i>
+            <div *ngIf="projectThree" style="margin-top: 15px;" class="borderBox">
+                <div class="form-group">
+                    <label>Organisation</label>
+                    <input type="text" [(ngModel)]="organisationThree" class="form-control"
+                        formControlName="organisationThree">
+                    <p *ngIf="registerForm.controls.organisationThree.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label for="fromDate">Project Duration (From)</label>
+                    <input type="date" [(ngModel)]="fromDateThree" id="fromDate" class="form-control"
+                        formControlName="durationFromThree" placeholder="From Date">
+                    <p *ngIf="registerForm.controls.durationFromThree.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <label for="toDate">Project Duration (To)</label>
+                    <input type="date" [(ngModel)]="toDateThree" id="toDate" class="form-control"
+                        formControlName="durationToThree" placeholder="To Date">
+                </div>
+                <div class="form-group">
+                    <label>Project Description</label>
+                    <textarea type="text" class="form-control" [(ngModel)]="descriptionThree"
+                        formControlName="projectDescriptionThree"></textarea>
+                    <p *ngIf="registerForm.controls.projectDescriptionThree.errors" class="alert alert-danger">This
+                        field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Roles and Responsibilities</label>
+                    <textarea type="text" class="form-control" [(ngModel)]="rolesThree"
+                        formControlName="responsibilityThree"></textarea>
+                    <p *ngIf="registerForm.controls.responsibilityThree.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+            </div>
+            <p class="titleHead">Social Connections</p>
+            <div class="borderBox">
+                <div class="form-group">
+                    <label>Email Id</label>
+                    <input [(ngModel)]="email" type="email" class="form-control" formControlName="emailId"
+                        placeholder="example@email.xxx">
+                    <!-- <p *ngIf="registerForm.controls.emailId.errors.required" class="alert alert-danger">This field is
+                        required!
+                    </p> -->
+                    <p *ngIf="registerForm.controls.emailId.errors" class="alert alert-danger">Please enter valid email id
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Whatsapp Contact Number</label>
+                    <input [(ngModel)]="whatsApp" type="number" class="form-control" formControlName="whatsappNumber"
+                        placeholder="+91 90XXXXXXXX">
+                    <p *ngIf="registerForm.controls.whatsappNumber.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Alternate Contact Number</label>
+                    <input type="number" [(ngModel)]="call" class="form-control" formControlName="callNumber"
+                        placeholder="+91 90XXXXXXXX">
+                </div>
+                <div class="form-group">
+                    <label>LinkedIn Profile URL</label>
+                    <input type="text" [(ngModel)]="linkedIn" class="form-control" formControlName="linkedIn"
+                        placeholder="Please Enter Profile URL">
+                    <p *ngIf="registerForm.controls.linkedIn.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Instagram Profile URL</label>
+                    <input type="url" [(ngModel)]="instagram" class="form-control" formControlName="instagram"
+                        placeholder="Please Enter Profile URL">
+                    <p *ngIf="registerForm.controls.instagram.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>Facebook Profile URL</label>
+                    <input type="url" [(ngModel)]="facebook" class="form-control" formControlName="facebook"
+                        placeholder="Please Enter Profile URL">
+                    <p *ngIf="registerForm.controls.facebook.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label>GitHub Profile URL</label>
+                    <input type="url" [(ngModel)]="github" class="form-control" formControlName="github"
+                        placeholder="Please Enter Profile URL">
+                    <p *ngIf="registerForm.controls.github.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
+                </div>
+            </div>
+            <button class="btn btn-primary btnAlign" [disabled]="!registerForm.valid" (click)="submit(registerForm.value)" type="submit">Submit</button>
+            <button class="btn btn-primary btnAlign" style="margin-left: 25px;" (click)="reset()"
+                type="reset">Reset</button>
+        </form>
+
+    </div>
+</div>

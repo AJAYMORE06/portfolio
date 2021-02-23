@@ -1,7 +1,13 @@
 .intro{
     margin-left: 12vw;
-    margin-top: 15vh;
+    margin-top: 13vh;
     display: flex;
+}
+.introD{
+margin-left: 12vw;
+margin-top: 24vh;
+display: flex;
+margin-bottom: 20vh;
 }
 .touch{
     color: #7066ff;

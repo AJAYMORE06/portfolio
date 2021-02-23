@@ -1,45 +1,50 @@
 <div class="container" style="margin-top: 15vh;margin-bottom: 15vh;">
-    <div class="row">
+    <div *ngIf="boxProject" class="row">
         <div class="col-md-8 offset-md-2  boxAbout">
-            <h4 class="fontFam" style="color: #fff;">Infosys Ltd (2.1 Years)</h4>
-            <p class="fontFam" style="color: #fff; font-size: 12px;"> (May 2019-Present)</p>
+            <h4 class="fontFam" style="color: #fff;">{{organisation}}</h4>
+            <p class="fontFam" style="color: #fff; font-size: 12px;"> {{durationProject}}</p>
             <p class="fontFam" style="color: #7066ff;font-size: 16px;font-weight: 500;">Project:</p>
-            <p class="fontFam boxStyle" style="padding-left: 10px;">Infosys Cyber Security Platform (ICSP) provides and
-                integrated, unified view of your security posture,
-                leveraging predictive analytics.
-                The platform is modular and allows organisations to select and subscribe to the security levels and
-                categories that best fits their needs.<br> It automates the service provided through the Infosys Global
-                Security Operations Centre.
-                This ranges from basic services (security monitoring, incident management, threat management and
-                reporting) to advanced customized services that include protection against malware, user and entity
-                behaviour analytics (UEBA), incident response, and security automation.</p><br>
-            <p class="fontFam" style="color: #7066ff;font-size: 16px;font-weight: 500;">Roles and Responsibilties:</p>
-            <div class="fontFam boxStyle" style="padding-left: 10px;">
-                <ol>
-                    <li>Understanding client requirement and Develop new user-facing features ensuring the technical
-                        feasibility
-                        of UI/UX designs with Angular 5 and Javascript concepts.</li>
-                    <li>Optimize application for maximum speed and scalability and assuring that all user input is
-                        validated before
-                        submitting to back-end.</li>
-                    <li>Work in multidisciplinary team with other professionals such as back-end developers and web
-                        designers.</li>
-                    <li>Ensuring the code by completing end to end and integration testing.</li>
-                </ol>
-            </div>
+            <p class="fontFam boxStyle" style="padding-left: 10px;">{{projectDesc}}</p><br>
+            <p class="fontFam" style="color: #7066ff;font-size: 16px;font-weight: 500;">Roles and Responsibilities:</p>
+            <p class="fontFam boxStyle" style="padding-left: 10px;">{{roles}}</p><br>
+        </div>
+    </div>
+    <div *ngIf="boxProjectsOne" class="row">
+        <div class="col-md-8 offset-md-2  boxAbout">
+            <h4 class="fontFam" style="color: #fff;">{{organisationOne}}</h4>
+            <p class="fontFam" style="color: #fff; font-size: 12px;"> {{durationProjectOne}}</p>
+            <p class="fontFam" style="color: #7066ff;font-size: 16px;font-weight: 500;">Project:</p>
+            <p class="fontFam boxStyle" style="padding-left: 10px;">{{projectDescOne}}</p><br>
+            <p class="fontFam" style="color: #7066ff;font-size: 16px;font-weight: 500;">Roles and Responsibilities:</p>
+            <p class="fontFam boxStyle" style="padding-left: 10px;">{{rolesOne}}</p><br>
+        </div>
+    </div>
+    <div *ngIf="boxProjectsTwo" class="row">
+        <div class="col-md-8 offset-md-2  boxAbout">
+            <h4 class="fontFam" style="color: #fff;">{{organisationTwo}}</h4>
+            <p class="fontFam" style="color: #fff; font-size: 12px;"> {{durationProjectTwo}}</p>
+            <p class="fontFam" style="color: #7066ff;font-size: 16px;font-weight: 500;">Project:</p>
+            <p class="fontFam boxStyle" style="padding-left: 10px;">{{projectDescTwo}}</p><br>
+            <p class="fontFam" style="color: #7066ff;font-size: 16px;font-weight: 500;">Roles and Responsibilities:</p>
+            <p class="fontFam boxStyle" style="padding-left: 10px;">{{rolesTwo}}</p><br>
+        </div>
+    </div>
+    <div *ngIf="boxProjectsThree" class="row">
+        <div class="col-md-8 offset-md-2  boxAbout">
+            <h4 class="fontFam" style="color: #fff;">{{organisationThree}}</h4>
+            <p class="fontFam" style="color: #fff; font-size: 12px;"> {{durationProjectThree}}</p>
+            <p class="fontFam" style="color: #7066ff;font-size: 16px;font-weight: 500;">Project:</p>
+            <p class="fontFam boxStyle" style="padding-left: 10px;">{{projectDescThree}}</p><br>
+            <p class="fontFam" style="color: #7066ff;font-size: 16px;font-weight: 500;">Roles and Responsibilities:</p>
+            <p class="fontFam boxStyle" style="padding-left: 10px;">{{rolesThree}}</p><br>
         </div>
     </div>
     <br>
-    <div class="row">
+    <div *ngIf="boxAboutAj" class="row">
         <div class="col-md-8 offset-md-2  boxAbout">
-            <h4 class="fontFam" style="color: #fff;">Infosys Training Project</h4>
+            <h4 class="fontFam" style="color: #fff;">{{organisationAj}}</h4>
             <p class="fontFam" style="color: #7066ff;font-size: 16px;font-weight: 500;">Project:</p>
-            <p class="fontFam boxStyle" style="padding-left: 10px;">Infy Tours and Travels..!,
-                Developed a working application for Tours and Travels, where user can book Hotel, Flight and Events
-                happening at their Holiday Destination. The user can view the feasible package and add
-                them to the cart.
-                Used concepts of HTML5, CSS, Bootstrap, Angular 5, Restful Web services, Session and
-                Local Storage and MySql Db.</p><br>
+            <p class="fontFam boxStyle" style="padding-left: 10px;">{{projectDescAj}}</p><br>
         </div>
     </div>
 </div>

@@ -6,7 +6,7 @@
     font-size: 13px;
   }
   .footer-social {
-    float: left;
+    float: right;
 }
 .site-footer .footer-social-links {
     list-style: none;
@@ -18,7 +18,8 @@
 }
 .site-footer {
     display: block;
-    padding: 15px 45px;
+    padding: 10px 45px;
+    padding-bottom: 0px !important;
     border-top: 1px solid #7066ff;
 }
 .footer-social-links{
@@ -33,6 +34,38 @@ footer {
     /* position:absolute; */
     bottom:0;
     width:100%;
-    margin-top: 91px;
-    height:60px;   /* Height of the footer */
+    margin-top: 70px;
+    height:93px;   /*Height of the footer*/
+}
+.iconsAlign{
+    font-size: 12px;
+    margin-right: 10px;
+}
+.inputPhoneNumber{
+    border: 0px solid transparent;
+    background: transparent;
+    color: #fff;
+}
+.input:focus{
+    border: 0px solid transparent !important;
+}
+
+.site-footer .footer-social-link li a {
+    color: #dddddd;
+    text-decoration: none;
+    line-height: 21px;
+    font-size: 13px;
+  }
+.site-footer .footer-social-link {
+    list-style: none;
+    padding: 0;
+}
+.footer-social-link{
+    margin-left: 5vw;
+}
+.contactDetails{
+    margin: 0px;
+    color: gray;
+    font-size: 12px;
+    margin-left: 11vh;
 }

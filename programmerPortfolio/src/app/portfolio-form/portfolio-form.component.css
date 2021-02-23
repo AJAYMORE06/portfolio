@@ -1,0 +1,51 @@
+.ng-valid[required]  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }
+  .box{
+
+  }
+  label{
+      color: #fff;
+      font-size: 14px;
+      padding-top: 10px;
+  }
+  .titleHead{
+font-size: 20px;
+padding-top: 15px;
+color:#7066ff;
+  }
+
+.smallHelpText{
+font-size: 14px !important;
+color: grey !important;
+}
+.borderBox{
+    border: 2px solid gray;
+    padding: 10px;
+    border-radius: 10px;
+}
+.borderBoxMain{
+    border: 2px solid gray;
+    padding: 15px 40px;
+    padding-bottom: 25px;
+    border-radius: 10px;
+}
+.btnAlign{
+    margin-top: 25px;
+}
+.alignPlusIcon{
+  font-size: 20px;
+  color: #fff;
+  margin-left: 41vw;
+  cursor: pointer;
+}
+.alignMinusIcon{
+  font-size: 20px;
+  color: #fff;
+  margin-left: 47vw;
+  padding-top: 15px;
+  cursor: pointer;
+}

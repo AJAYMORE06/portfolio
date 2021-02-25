@@ -67,7 +67,7 @@ export class PortfolioFormComponent implements OnInit {
   facebook: any = '';
   github: any = '';
   formDetails: any;
-  constructor(private fb: FormBuilder, public router: Router,private ref: ChangeDetectorRef) { }
+  constructor(private fb: FormBuilder, public router: Router, private ref: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.formDetails = JSON.parse(localStorage.getItem("formDetails"));
@@ -136,12 +136,13 @@ export class PortfolioFormComponent implements OnInit {
       }
     }
     this.registerForm = this.fb.group({
+      emailId: ['', [Validators.required, Validators.email]],
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       age: ['', Validators.required],
       shortGoal: ['', Validators.required],
       longGoal: ['', Validators.required],
-      editor: ['',Validators.required],
+      editor: ['', Validators.required],
       indoor: ['', Validators.required],
       outdoor: ['', Validators.required],
       technicalSkills: ['', Validators.required],
@@ -153,7 +154,6 @@ export class PortfolioFormComponent implements OnInit {
       totalExperience: ['', Validators.required],
       currentEmployer: [''],
       designation: [''],
-      emailId:['',Validators.email],
       whatsappNumber: ['', Validators.required],
       callNumber: ['', Validators.required],
       linkedIn: ['', Validators.required],
@@ -187,10 +187,10 @@ export class PortfolioFormComponent implements OnInit {
 
   ngAfterContentChecked() {
     this.ref.detectChanges();
-}
+  }
 
   addProject() {
-    console.log(this.count)
+    // console.log(this.count)
     this.count = this.count + 1;
     if (this.count == 1) {
       this.projectOne = true;
@@ -239,9 +239,10 @@ export class PortfolioFormComponent implements OnInit {
   }
 
   submit(event) {
-    console.log(event)
-    console.log(this.model.editorData)
+    // console.log(event)
+    // console.log(this.model.editorData)
     if (this.registerForm.valid) {
+      event.editor = this.registerForm.get('editor').value;
       localStorage.setItem("formDetails", JSON.stringify(event));
       alert("Your Form is successfully submitted, Please click 'OK' to continue");
       this.router.navigate(['/home']).then(() => {

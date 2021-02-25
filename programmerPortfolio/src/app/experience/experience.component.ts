@@ -35,7 +35,7 @@ export class ExperienceComponent implements OnInit {
   ngOnInit(): void {
     this.formDetails = JSON.parse(localStorage.getItem("formDetails"));
     if (this.formDetails != undefined && this.formDetails != null && this.formDetails != '') {
-      console.log("inside experinece", this.formDetails.organisation)
+      // console.log("inside experinece", this.formDetails.organisation)
       if (this.formDetails.organisation != null && this.formDetails.organisation != undefined && this.formDetails.organisation != "") {
         this.boxAboutAj = false;
         this.boxProject = true;

@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
     this.formDetails = JSON.parse(localStorage.getItem("formDetails"));
     if (this.formDetails != null && this.formDetails != undefined && this.formDetails != "") {
       if (this.formDetails.firstName != null && this.formDetails.firstName != undefined && this.formDetails.firstName != "") {
-        console.log("inside header")
+        // console.log("inside header")
         this.resetBtn = true;
         this.makeBtn = false;
       } else {

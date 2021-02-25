@@ -16,10 +16,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.formDetails = JSON.parse(localStorage.getItem("formDetails"));
-    console.log(this.formDetails)
+    // console.log(this.formDetails)
     if (this.formDetails != undefined && this.formDetails != null && this.formDetails != '') {
       if (this.formDetails.firstName != null && this.formDetails.firstName != undefined && this.formDetails.firstName != "") {
-        console.log("inside home")
+        // console.log("inside home")
         this.showDownload=false;
         this.name = this.formDetails.firstName + " " + this.formDetails.lastName;
         this.title = this.formDetails.workProfile;

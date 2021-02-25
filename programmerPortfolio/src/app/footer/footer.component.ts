@@ -19,7 +19,7 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
     this.formDetails = JSON.parse(localStorage.getItem("formDetails"));
     if (this.formDetails != undefined && this.formDetails != null && this.formDetails != '') {
-      console.log("inside footer")
+      // console.log("inside footer")
       this.whatsAppNum = this.formDetails.whatsappNumber;
       this.emailId = this.formDetails.emailId;
       this.linkedIn = this.formDetails.linkedIn;

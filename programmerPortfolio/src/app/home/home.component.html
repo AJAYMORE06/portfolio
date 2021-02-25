@@ -10,9 +10,9 @@
                 <a routerLink="/about" class="touch fontFam">Let's get in touch!</a>
             </p>
             <br>
-            <button class="btn btn-primary" (click)="download()" type="button"><a
-                    class="downloadLink" href="../../assets/Ajay's Resume.pdf" download>Download CV</a></button>
-            
+            <button class="btn btn-primary" (click)="download()" type="button"><a class="downloadLink"
+                    href="../../assets/Ajay's Resume.pdf" download>Download CV</a></button>
+
         </div>
     </div>
 </div>
@@ -23,13 +23,11 @@
             <h4 class="text-white fontFam">{{title}}</h4>
             <h1 class="text-white fontFam">{{name}}</h1><br>
 
-            <p class="text-white fontFam"> {{introduction}}
-                <br>
-                <a routerLink="/about" class="touch fontFam">Let's get in touch!</a>
-            </p>
+            <p class="text-white fontFam" [innerHTML]="introduction"></p>
             <br>
-            <button class="btn btn-primary" type="button"><a class="downloadLink"
-                href="https://novoresume.com/" target="_blank" download>Build Resume</a></button>
+            <p><a routerLink="/about" class="touch fontFam">Let's get in touch!</a></p>
+            <br>
+
         </div>
     </div>
 </div>

@@ -342,24 +342,31 @@
                     <label>Email Id</label>
                     <input [(ngModel)]="email" type="email" class="form-control" formControlName="emailId"
                         placeholder="example@email.xxx">
-                    <!-- <p *ngIf="registerForm.controls.emailId.errors.required" class="alert alert-danger">This field is
-                        required!
-                    </p> -->
-                    <p *ngIf="registerForm.controls.emailId.errors" class="alert alert-danger">Please enter valid email id
-                    </p>
+                    <div *ngIf="registerForm.controls.emailId.errors">
+                        <p *ngIf="registerForm.controls.emailId.errors.required" class="alert alert-danger">This field
+                            is
+                            required!
+                        </p>
+                        <p *ngIf="registerForm.controls.emailId.errors.email" class="alert alert-danger">Please enter
+                            valid email id
+                        </p>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Whatsapp Contact Number</label>
-                    <input [(ngModel)]="whatsApp" type="number" class="form-control" formControlName="whatsappNumber"
-                        placeholder="+91 90XXXXXXXX">
+                    <input [(ngModel)]="whatsApp" type="number" min="1000000000" max="9999999999" class="form-control"
+                        formControlName="whatsappNumber" placeholder="+91 90XXXXXXXX">
                     <p *ngIf="registerForm.controls.whatsappNumber.errors" class="alert alert-danger">This field is
                         required!
                     </p>
                 </div>
                 <div class="form-group">
                     <label>Alternate Contact Number</label>
-                    <input type="number" [(ngModel)]="call" class="form-control" formControlName="callNumber"
-                        placeholder="+91 90XXXXXXXX">
+                    <input type="number" [(ngModel)]="call" min="1000000000" max="9999999999" class="form-control"
+                        formControlName="callNumber" placeholder="+91 90XXXXXXXX">
+                    <p *ngIf="registerForm.controls.callNumber.errors" class="alert alert-danger">This field is
+                        required!
+                    </p>
                 </div>
                 <div class="form-group">
                     <label>LinkedIn Profile URL</label>

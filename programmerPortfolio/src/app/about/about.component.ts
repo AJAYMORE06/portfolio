@@ -30,7 +30,7 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
     this.formDetails = JSON.parse(localStorage.getItem("formDetails"));
     if (this.formDetails != undefined && this.formDetails != null && this.formDetails != '') {
-      console.log("inside about")
+      // console.log("inside about")
       if (this.formDetails.firstName != undefined && this.formDetails.firstName != null && this.formDetails.firstName != '') {
         this.firstName = "'" + this.formDetails.firstName + "'";
         this.lastName = "'" + this.formDetails.lastName + "'";
@@ -57,12 +57,12 @@ export class AboutComponent implements OnInit {
         let tech = this.formDetails.technicalSkills.split(',')
         tech.forEach(element => {
           this.technicalSkills = this.technicalSkills + "'" + element + "', "
-          console.log(this.technicalSkills)
+          // console.log(this.technicalSkills)
         });
         let soft = this.formDetails.softSkills.split(',')
         soft.forEach(element => {
           this.softSkills = this.softSkills + "'" + element + "', "
-          console.log(this.softSkills)
+          // console.log(this.softSkills)
         });
       }
       else {
